@@ -1,0 +1,38 @@
+{
+  "en": {
+    "currency": {
+      "unit": "$",
+      "format": " %u %n",
+      "separator": ".",
+      "delimiter": ","
+    },
+    "budget_grid_table": {
+      "description": "Description",
+      "category": "Category",
+      "amount": "Amount"
+    },
+    "budget_grid_row": {
+      "i18n_description": "Description",
+      "i18n_category": "Category",
+      "i18n_amount": "Amount"
+    }
+  },
+  "pt-BR": {
+    "currency": {
+      "unit": "R$",
+      "format": " %u %n",
+      "separator": ",",
+      "delimiter": "."
+    },
+    "budget_grid_table": {
+      "description": "Descrição",
+      "category": "Categoria",
+      "amount": "Quantidade"
+    },
+    "budget_grid_row": {
+      "i18n_description": "Descrição",
+      "i18n_category": "Categoria",
+      "i18n_amount": "Quantidade"
+    }
+  }
+}

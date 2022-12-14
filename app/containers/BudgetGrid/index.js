@@ -6,7 +6,13 @@ import { getCategories } from 'selectors/categories';
 import EntryFormRow from 'containers/EntryFormRow';
 import type { Transaction } from 'modules/transactions';
 import BudgetGridRow from 'components/BudgetGridRow';
+import { I18n } from 'i18n-js';
 import styles from './style.scss';
+import translations from '../../lang/translations.json';
+
+const i18n = new I18n(translations);
+const clientLocale = navigator.language || 'en';
+i18n.locale = clientLocale;
 
 type BudgetGridProps = {
   transactions: Transaction[],
@@ -41,14 +47,15 @@ export class BudgetGrid extends React.Component<BudgetGridProps> {
 
   render() {
     const { transactions, categories } = this.props;
+    const { description, category, amount } = i18n.t('budget_grid_table');
 
     return (
       <table className={styles.budgetGrid}>
         <thead>
           <tr>
-            <th>Category</th>
-            <th>Description</th>
-            <th>Amount</th>
+            <th>{description}</th>
+            <th>{category}</th>
+            <th>{amount}</th>
           </tr>
         </thead>
         <tbody>
